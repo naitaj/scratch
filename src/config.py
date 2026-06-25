@@ -16,6 +16,12 @@ DIRS = {
     "news": os.path.join(RAW_DIR, "news"),
     "spatial": os.path.join(RAW_DIR, "spatial"),
     "social_media": os.path.join(RAW_DIR, "social_media"),
+    "caste_survey": os.path.join(RAW_DIR, "caste_survey"),
+    "nfhs_5": os.path.join(RAW_DIR, "nfhs_5"),
+    "electoral_roll": os.path.join(RAW_DIR, "electoral_roll"),
+    "economic_indicators": os.path.join(RAW_DIR, "economic_indicators"),
+    "infrastructure": os.path.join(RAW_DIR, "infrastructure"),
+    "flood_vulnerability": os.path.join(RAW_DIR, "flood_vulnerability"),
 }
 
 # Ensure directories exist (DR1)

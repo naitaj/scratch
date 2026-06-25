@@ -34,12 +34,32 @@ NEWS_TEMPLATES = [
         "title": "Voter turnout expected to touch record highs in {ac_name}",
         "snippet": "Electoral awareness campaigns and intense political mobilization by party workers point to a high turnout of youth and women voters in {ac_name} constituency.",
         "topic": "turnout"
+    },
+    {
+        "title": "Economic survey reports positive growth in {ac_name} assembly segment",
+        "snippet": "Local growth indicators and agricultural trade volumes in {ac_name} show upward trends, becoming a talking point for local candidates.",
+        "topic": "economics"
+    },
+    {
+        "title": "Women voters of {ac_name} demand better primary healthcare and clean water",
+        "snippet": "A coalition of local self-help groups in {ac_name} has presented a list of demands to major political parties emphasizing sanitational assets.",
+        "topic": "welfare"
+    },
+    {
+        "title": "Independent candidates emerge as spoilers in {ac_name} triangular contest",
+        "snippet": "With rebel leaders refusing to withdraw their nominations in {ac_name}, political analysts predict a tight multi-cornered fight.",
+        "topic": "campaign"
+    },
+    {
+        "title": "Flood protection works in {ac_name} inspected by state cabinet delegation",
+        "snippet": "With local embankments requiring urgent reinforcements, the local flood relief work has become a major talking point in {ac_name}.",
+        "topic": "disaster"
     }
 ]
 
 def generate_mock_news_articles(ac_no, ac_name):
     random.seed(ac_no + 9876)
-    num_articles = random.randint(2, 5)
+    num_articles = random.randint(15, 30)
     articles = []
     
     # Pre-election window: Sep 1, 2024 to Nov 30, 2024
@@ -47,7 +67,7 @@ def generate_mock_news_articles(ac_no, ac_name):
     end_date = datetime(2024, 11, 30)
     delta_days = (end_date - start_date).days
     
-    selected_templates = random.sample(NEWS_TEMPLATES, num_articles)
+    selected_templates = random.choices(NEWS_TEMPLATES, k=num_articles)
     
     for i, temp in enumerate(selected_templates):
         article_days = random.randint(0, delta_days)
@@ -97,7 +117,7 @@ def fetch_google_news_rss(ac_name):
         root = ET.fromstring(response.content)
         articles = []
         
-        for item in root.findall('.//item')[:10]: # Limit to top 10 articles
+        for item in root.findall('.//item')[:30]: # Limit to top 30 articles
             title_el = item.find('title')
             link_el = item.find('link')
             pub_el = item.find('pubDate')

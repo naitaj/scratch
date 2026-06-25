@@ -16,6 +16,12 @@ from src.scheme_tracker import track_constituency_schemes
 from src.news_aggregator import aggregate_constituency_news
 from src.spatial_downloader import download_constituency_spatial
 from src.social_media_scraper import scrape_constituency_social_media
+from src.caste_survey_ingester import ingest_constituency_caste
+from src.nfhs_ingester import ingest_constituency_nfhs
+from src.electoral_roll_ingester import ingest_constituency_electoral_roll
+from src.economic_ingester import ingest_constituency_economics
+from src.infrastructure_ingester import ingest_constituency_infrastructure
+from src.flood_ingester import ingest_constituency_flood
 
 CHECKPOINT_PATH = r"c:\scratch\logs\checkpoint.json"
 
@@ -68,7 +74,13 @@ def generate_data_dictionary():
         "schemes": {"desc": "MGNREGA, PMAY and Ujjwala welfare allocations", "format": "JSON Lines (.jsonl)"},
         "news": {"desc": "Pre-election media mention snippets and urls", "format": "JSON Lines (.jsonl)"},
         "spatial": {"desc": "Boundary polygons represented in GeoJSON formats", "format": "GeoJSON (.geojson)"},
-        "social_media": {"desc": "Reddit, YouTube and Twitter/X sentiment metrics and post details", "format": "JSON Lines (.jsonl)"}
+        "social_media": {"desc": "Reddit, YouTube and Twitter/X sentiment metrics and post details", "format": "JSON Lines (.jsonl)"},
+        "caste_survey": {"desc": "Bihar Caste Survey 2023 statistics showing percentage splits of EBC, BC, SC, ST, and General", "format": "JSON Lines (.jsonl)"},
+        "nfhs_5": {"desc": "NFHS-5 health, literacy, sanitation and stunted growth indicators", "format": "JSON Lines (.jsonl)"},
+        "electoral_roll": {"desc": "ECI Electoral roll demographics including gender ratios and age cohorts", "format": "JSON Lines (.jsonl)"},
+        "economic_indicators": {"desc": "RBI commercial banking and Bihar Economic Survey gross district domestic product (GDDP) and CD ratios", "format": "JSON Lines (.jsonl)"},
+        "infrastructure": {"desc": "PMGSY road connectivity rates, school access and healthcare ratios", "format": "JSON Lines (.jsonl)"},
+        "flood_vulnerability": {"desc": "Flood risk classifications, associated river basins and inundation vulnerability area metrics", "format": "JSON Lines (.jsonl)"}
     }
     
     md_content = []
@@ -275,6 +287,60 @@ async def run_pipeline(limit=None, live=False):
                 ok = await scrape_constituency_social_media(page, constituency, live=live)
                 if not ok:
                     log_error(f"Social media scraping failed for {ac_id}. Skipping.")
+
+            # Module 8: Caste Survey Ingester
+            file_caste = os.path.join(DIRS["caste_survey"], f"{ac_id}_{snake}_caste.jsonl")
+            if os.path.exists(file_caste):
+                log_info(f"Caste survey data already exists for {ac_id} ({os.path.basename(file_caste)}). Skipping.")
+            else:
+                ok = ingest_constituency_caste(constituency, live=live)
+                if not ok:
+                    log_error(f"Caste survey ingestion failed for {ac_id}. Skipping.")
+
+            # Module 9: NFHS-5 Ingester
+            file_nfhs = os.path.join(DIRS["nfhs_5"], f"{ac_id}_{snake}_nfhs5.jsonl")
+            if os.path.exists(file_nfhs):
+                log_info(f"NFHS-5 data already exists for {ac_id} ({os.path.basename(file_nfhs)}). Skipping.")
+            else:
+                ok = ingest_constituency_nfhs(constituency, live=live)
+                if not ok:
+                    log_error(f"NFHS-5 ingestion failed for {ac_id}. Skipping.")
+
+            # Module 10: Electoral Roll Ingester
+            file_er = os.path.join(DIRS["electoral_roll"], f"{ac_id}_{snake}_electoral_roll.jsonl")
+            if os.path.exists(file_er):
+                log_info(f"Electoral roll data already exists for {ac_id} ({os.path.basename(file_er)}). Skipping.")
+            else:
+                ok = ingest_constituency_electoral_roll(constituency, live=live)
+                if not ok:
+                    log_error(f"Electoral roll ingestion failed for {ac_id}. Skipping.")
+
+            # Module 11: Economic Indicators Ingester
+            file_econ = os.path.join(DIRS["economic_indicators"], f"{ac_id}_{snake}_economics.jsonl")
+            if os.path.exists(file_econ):
+                log_info(f"Economic indicators data already exists for {ac_id} ({os.path.basename(file_econ)}). Skipping.")
+            else:
+                ok = ingest_constituency_economics(constituency, live=live)
+                if not ok:
+                    log_error(f"Economic indicators ingestion failed for {ac_id}. Skipping.")
+
+            # Module 12: Infrastructure Ingester
+            file_infra = os.path.join(DIRS["infrastructure"], f"{ac_id}_{snake}_infrastructure.jsonl")
+            if os.path.exists(file_infra):
+                log_info(f"Infrastructure data already exists for {ac_id} ({os.path.basename(file_infra)}). Skipping.")
+            else:
+                ok = ingest_constituency_infrastructure(constituency, live=live)
+                if not ok:
+                    log_error(f"Infrastructure ingestion failed for {ac_id}. Skipping.")
+
+            # Module 13: Flood Vulnerability Ingester
+            file_flood = os.path.join(DIRS["flood_vulnerability"], f"{ac_id}_{snake}_flood.jsonl")
+            if os.path.exists(file_flood):
+                log_info(f"Flood vulnerability data already exists for {ac_id} ({os.path.basename(file_flood)}). Skipping.")
+            else:
+                ok = ingest_constituency_flood(constituency, live=live)
+                if not ok:
+                    log_error(f"Flood vulnerability ingestion failed for {ac_id}. Skipping.")
 
             # Record completed AC
             completed_nos.append(ac_no)
