@@ -1,6 +1,8 @@
 import os
 import json
 import random
+import xml.etree.ElementTree as ET
+import httpx
 from datetime import datetime, timedelta
 from src.config import DIRS, NEWS_API_KEY
 from src.logger import log_info, log_success, log_warn, log_error
@@ -72,6 +74,72 @@ def generate_mock_news_articles(ac_no, ac_name):
         
     return articles
 
+def fetch_google_news_rss(ac_name):
+    """
+    Crawls the Google News RSS feed for the target constituency (no API key required).
+    Resolves NewsAPI limitations for time range/billing blocks.
+    """
+    # Search query: Bihar election <ConstituencyName>
+    query_encoded = f"Bihar+election+{ac_name.replace(' ', '+')}"
+    url = f"https://news.google.com/rss/search?q={query_encoded}&hl=en-IN&gl=IN&ceid=IN:en"
+    
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
+    
+    try:
+        log_info(f"Crawling Google News RSS feed: {url}")
+        response = httpx.get(url, headers=headers, timeout=8)
+        if response.status_code != 200:
+            log_warn(f"Google News RSS returned status code {response.status_code}")
+            return []
+            
+        root = ET.fromstring(response.content)
+        articles = []
+        
+        for item in root.findall('.//item')[:10]: # Limit to top 10 articles
+            title_el = item.find('title')
+            link_el = item.find('link')
+            pub_el = item.find('pubDate')
+            desc_el = item.find('description')
+            
+            title_text = title_el.text if title_el is not None else ""
+            link_text = link_el.text if link_el is not None else ""
+            pub_date_raw = pub_el.text if pub_el is not None else ""
+            snippet_text = desc_el.text if desc_el is not None else ""
+            
+            # Extract clean title and source from Google News format "Title - Source"
+            title = title_text
+            source = "Google News"
+            if " - " in title_text:
+                parts = title_text.rsplit(" - ", 1)
+                title = parts[0]
+                source = parts[1]
+                
+            # Parse publication date to simple format YYYY-MM-DD
+            pub_date_str = pub_date_raw
+            try:
+                # E.g. "Mon, 22 Jun 2026 07:00:00 GMT"
+                dt = datetime.strptime(pub_date_raw, "%a, %d %b %Y %H:%M:%S %Z")
+                pub_date_str = dt.strftime("%Y-%m-%d")
+            except Exception:
+                pass
+                
+            articles.append({
+                "title": title,
+                "source_publication": source,
+                "publishing_date": pub_date_str,
+                "snippet_text": snippet_text,
+                "url_string": link_text,
+                "tagged_constituency": ac_name,
+                "relevance_score": 1.0 # True live article
+            })
+            
+        return articles
+    except Exception as e:
+        log_warn(f"Failed to crawl RSS for {ac_name}: {e}")
+        return []
+
 def aggregate_constituency_news(constituency, live=False):
     ac_id = constituency["ac_id"]
     ac_no = constituency["ac_no"]
@@ -83,27 +151,12 @@ def aggregate_constituency_news(constituency, live=False):
     
     log_info(f"Aggregating news media mentions for {ac_id} - {ac_name}")
     
-    # Check if we should execute live NewsAPI calls (FR5)
-    if live and NEWS_API_KEY:
-        try:
-            # Query NewsAPI and extract articles within the pre-election timeframe (Sep 1 to Nov 30, 2024)
-            # Staying within standard free-tier service thresholds (TC2)
-            url = "https://newsapi.org/v2/everything"
-            params = {
-                "q": f"Bihar election {ac_name}",
-                "from": "2024-09-01",
-                "to": "2024-11-30",
-                "sortBy": "relevance",
-                "apiKey": NEWS_API_KEY
-            }
-            # Heuristic exception trigger to ensure fallback works when key is empty/invalid
-            if len(NEWS_API_KEY) < 10:
-                raise Exception("Invalid or incomplete NewsAPI Key.")
-                
-            # Perform query if needed, or fallback
-            raise Exception("Mocking live API threshold block. Activating fallback.")
-        except Exception as e:
-            log_warn(f"Live news aggregation failed for {ac_id} ({e}). Activating high-fidelity fallback.")
+    articles = []
+    if live:
+        # Live RSS retrieval (no API limits)
+        articles = fetch_google_news_rss(ac_name)
+        if not articles:
+            log_warn(f"Live RSS returned 0 articles for {ac_name}. Falling back to pre-election simulation.")
             articles = generate_mock_news_articles(ac_no, ac_name)
     else:
         articles = generate_mock_news_articles(ac_no, ac_name)
@@ -119,3 +172,4 @@ def aggregate_constituency_news(constituency, live=False):
             
     log_success(f"Successfully saved {len(articles)} news articles to {filepath}")
     return True
+

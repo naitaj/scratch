@@ -15,6 +15,7 @@ from src.census_ingester import ingest_constituency_census
 from src.scheme_tracker import track_constituency_schemes
 from src.news_aggregator import aggregate_constituency_news
 from src.spatial_downloader import download_constituency_spatial
+from src.social_media_scraper import scrape_constituency_social_media
 
 CHECKPOINT_PATH = r"c:\scratch\logs\checkpoint.json"
 
@@ -66,7 +67,8 @@ def generate_data_dictionary():
         "census": {"desc": "Primary Census Abstract demographic splits mapped to assembly bounds", "format": "JSON Lines (.jsonl)"},
         "schemes": {"desc": "MGNREGA, PMAY and Ujjwala welfare allocations", "format": "JSON Lines (.jsonl)"},
         "news": {"desc": "Pre-election media mention snippets and urls", "format": "JSON Lines (.jsonl)"},
-        "spatial": {"desc": "Boundary polygons represented in GeoJSON formats", "format": "GeoJSON (.geojson)"}
+        "spatial": {"desc": "Boundary polygons represented in GeoJSON formats", "format": "GeoJSON (.geojson)"},
+        "social_media": {"desc": "Reddit, YouTube and Twitter/X sentiment metrics and post details", "format": "JSON Lines (.jsonl)"}
     }
     
     md_content = []
@@ -265,7 +267,15 @@ async def run_pipeline(limit=None, live=False):
                 if not ok:
                     log_error(f"Spatial boundary download failed for {ac_id}. Skipping.")
 
-                
+            # Module 7: Social Media Ingester
+            file_social = os.path.join(DIRS["social_media"], f"{ac_id}_{snake}_social.jsonl")
+            if os.path.exists(file_social):
+                log_info(f"Social media data already exists for {ac_id} ({os.path.basename(file_social)}). Skipping.")
+            else:
+                ok = await scrape_constituency_social_media(page, constituency, live=live)
+                if not ok:
+                    log_error(f"Social media scraping failed for {ac_id}. Skipping.")
+
             # Record completed AC
             completed_nos.append(ac_no)
             save_checkpoint({"completed_ac_nos": completed_nos})

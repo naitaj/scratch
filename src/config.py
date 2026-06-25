@@ -15,6 +15,7 @@ DIRS = {
     "schemes": os.path.join(RAW_DIR, "schemes"),
     "news": os.path.join(RAW_DIR, "news"),
     "spatial": os.path.join(RAW_DIR, "spatial"),
+    "social_media": os.path.join(RAW_DIR, "social_media"),
 }
 
 # Ensure directories exist (DR1)
