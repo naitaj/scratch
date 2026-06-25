@@ -22,6 +22,7 @@ from src.electoral_roll_ingester import ingest_constituency_electoral_roll
 from src.economic_ingester import ingest_constituency_economics
 from src.infrastructure_ingester import ingest_constituency_infrastructure
 from src.flood_ingester import ingest_constituency_flood
+from src.latest_ingester import ingest_constituency_latest
 
 CHECKPOINT_PATH = r"c:\scratch\logs\checkpoint.json"
 
@@ -80,7 +81,8 @@ def generate_data_dictionary():
         "electoral_roll": {"desc": "ECI Electoral roll demographics including gender ratios and age cohorts", "format": "JSON Lines (.jsonl)"},
         "economic_indicators": {"desc": "RBI commercial banking and Bihar Economic Survey gross district domestic product (GDDP) and CD ratios", "format": "JSON Lines (.jsonl)"},
         "infrastructure": {"desc": "PMGSY road connectivity rates, school access and healthcare ratios", "format": "JSON Lines (.jsonl)"},
-        "flood_vulnerability": {"desc": "Flood risk classifications, associated river basins and inundation vulnerability area metrics", "format": "JSON Lines (.jsonl)"}
+        "flood_vulnerability": {"desc": "Flood risk classifications, associated river basins and inundation vulnerability area metrics", "format": "JSON Lines (.jsonl)"},
+        "latest": {"desc": "15 new demographic, infrastructure, political and financial indicators", "format": "JSON Lines (.jsonl)"}
     }
     
     md_content = []
@@ -341,6 +343,15 @@ async def run_pipeline(limit=None, live=False):
                 ok = ingest_constituency_flood(constituency, live=live)
                 if not ok:
                     log_error(f"Flood vulnerability ingestion failed for {ac_id}. Skipping.")
+
+            # Module 14: Latest Consolidated Ingester (15 Datasets)
+            file_latest_check = os.path.join(DIRS["latest"], f"{ac_id}_{snake}_amf.jsonl")
+            if os.path.exists(file_latest_check):
+                log_info(f"Latest consolidated datasets already exist for {ac_id}. Skipping.")
+            else:
+                ok = ingest_constituency_latest(constituency)
+                if not ok:
+                    log_error(f"Latest consolidated datasets ingestion failed for {ac_id}. Skipping.")
 
             # Record completed AC
             completed_nos.append(ac_no)
