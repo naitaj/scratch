@@ -23,6 +23,7 @@ DIRS = {
     "infrastructure": os.path.join(RAW_DIR, "infrastructure"),
     "flood_vulnerability": os.path.join(RAW_DIR, "flood_vulnerability"),
     "latest": os.path.join(RAW_DIR, "latest"),
+    "latest1": os.path.join(RAW_DIR, "latest1"),
 }
 
 # Ensure directories exist (DR1)

@@ -23,6 +23,7 @@ from src.economic_ingester import ingest_constituency_economics
 from src.infrastructure_ingester import ingest_constituency_infrastructure
 from src.flood_ingester import ingest_constituency_flood
 from src.latest_ingester import ingest_constituency_latest
+from src.latest1_ingester import ingest_constituency_latest1
 
 CHECKPOINT_PATH = r"c:\scratch\logs\checkpoint.json"
 
@@ -82,7 +83,8 @@ def generate_data_dictionary():
         "economic_indicators": {"desc": "RBI commercial banking and Bihar Economic Survey gross district domestic product (GDDP) and CD ratios", "format": "JSON Lines (.jsonl)"},
         "infrastructure": {"desc": "PMGSY road connectivity rates, school access and healthcare ratios", "format": "JSON Lines (.jsonl)"},
         "flood_vulnerability": {"desc": "Flood risk classifications, associated river basins and inundation vulnerability area metrics", "format": "JSON Lines (.jsonl)"},
-        "latest": {"desc": "15 new demographic, infrastructure, political and financial indicators", "format": "JSON Lines (.jsonl)"}
+        "latest": {"desc": "15 new demographic, infrastructure, political and financial indicators", "format": "JSON Lines (.jsonl)"},
+        "latest1": {"desc": "100 new demographic, infrastructure, political and financial indicators", "format": "JSON Lines (.jsonl)"}
     }
     
     md_content = []
@@ -352,6 +354,15 @@ async def run_pipeline(limit=None, live=False):
                 ok = ingest_constituency_latest(constituency)
                 if not ok:
                     log_error(f"Latest consolidated datasets ingestion failed for {ac_id}. Skipping.")
+
+            # Module 15: Latest1 Consolidated Ingester (100 Datasets)
+            file_latest1_check = os.path.join(DIRS["latest1"], f"{ac_id}_{snake}_unemployment_rate.jsonl")
+            if os.path.exists(file_latest1_check):
+                log_info(f"Latest1 consolidated datasets already exist for {ac_id}. Skipping.")
+            else:
+                ok = ingest_constituency_latest1(constituency)
+                if not ok:
+                    log_error(f"Latest1 consolidated datasets ingestion failed for {ac_id}. Skipping.")
 
             # Record completed AC
             completed_nos.append(ac_no)
