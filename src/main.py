@@ -47,15 +47,17 @@ def count_file_records(filepath):
             return sum(1 for _ in f)
     except Exception:
         return 0
-
 def generate_data_dictionary():
     """
     AC4: Builds a preliminary draft structure for data_dictionary.md,
     tracing file system paths and total record metrics to meet Phase 1 closure criteria.
     """
-    log_info("Generating raw data dictionary (data/raw/data_dictionary.md)...")
-    dict_path = os.path.join(DIRS["eci_2025"], "..", "data_dictionary.md")
-    dict_path = os.path.abspath(dict_path)
+    log_info("Generating raw data dictionary (docs/data_dictionary.md)...")
+    docs_dir = r"C:\BoothIQ\docs"
+    os.makedirs(docs_dir, exist_ok=True)
+    dict_path = os.path.join(docs_dir, "data_dictionary.md")
+
+
     
     sections = {
         "eci_2025": {"desc": "ECI Bihar 2025 Legislative Assembly results per constituency", "format": "JSON Lines (.jsonl)"},

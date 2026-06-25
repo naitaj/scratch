@@ -46,6 +46,27 @@ def get_census_data_for_constituency(ac_no, ac_name, district):
     st_pop = int(total_pop * (st_pct / 100.0))
     general_other_pop = total_pop - (sc_pop + st_pop)
     
+    # Religion composition based on region/district (Census 2011 ground truth)
+    # Kishanganj has ~68% Muslim, Araria ~43%, Katihar ~44%, Purnia ~38%. Others are mostly 80%+ Hindu.
+    dist_lower = district.lower()
+    if "kishanganj" in dist_lower:
+        muslim_pct = random.uniform(65.0, 70.0)
+    elif "araria" in dist_lower or "katihar" in dist_lower:
+        muslim_pct = random.uniform(40.0, 45.0)
+    elif "purnia" in dist_lower:
+        muslim_pct = random.uniform(35.0, 40.0)
+    elif any(d in dist_lower for d in ["darbhanga", "champaran", "siwan"]):
+        muslim_pct = random.uniform(18.0, 24.0)
+    else:
+        muslim_pct = random.uniform(7.0, 15.0)
+        
+    other_pct = random.uniform(0.1, 0.6)
+    hindu_pct = 100.0 - (muslim_pct + other_pct)
+    
+    hindu_pop = int(total_pop * (hindu_pct / 100.0))
+    muslim_pop = int(total_pop * (muslim_pct / 100.0))
+    other_religion_pop = total_pop - (hindu_pop + muslim_pop)
+    
     # Occupation breakdown
     # Cultivators, Agricultural Laborers, Household Industry Workers, Other Workers
     cultivators = int(total_pop * random.uniform(0.15, 0.25))
@@ -76,6 +97,14 @@ def get_census_data_for_constituency(ac_no, ac_name, district):
             "st_ratio_pct": round(st_pct, 2),
             "general_other_population": general_other_pop
         },
+        "religion_composition": {
+            "hindu_population": hindu_pop,
+            "muslim_population": muslim_pop,
+            "other_religion_population": other_religion_pop,
+            "hindu_ratio_pct": round(hindu_pct, 2),
+            "muslim_ratio_pct": round(muslim_pct, 2),
+            "other_religion_ratio_pct": round(other_pct, 2)
+        },
         "occupation_mapping": {
             "cultivators_count": cultivators,
             "agricultural_laborers_count": agri_laborers,
@@ -84,6 +113,7 @@ def get_census_data_for_constituency(ac_no, ac_name, district):
             "non_workers_count": non_workers
         }
     }
+
 
 def ingest_constituency_census(constituency, live=False):
     ac_id = constituency["ac_id"]
