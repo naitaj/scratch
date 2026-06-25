@@ -1,0 +1,23 @@
+# Python caches and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Project logs
+logs/
+
+# Raw Data (Ignore large PDFs and raw scrapes to keep git lightweight, except data_dictionary.md)
+data/raw/*
+!data/raw/data_dictionary.md
+
+# OS specific files
+.DS_Store
+Thumbs.db

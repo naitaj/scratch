@@ -1,0 +1,7 @@
+pandas
+openpyxl
+pdfplumber
+beautifulsoup4
+httpx
+loguru
+playwright

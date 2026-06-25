@@ -1,0 +1,1946 @@
+[
+    {
+        "ac_no": 1,
+        "ac_id": "AC001",
+        "original_name": "Valmiki Nagar",
+        "clean_name": "Valmiki Nagar",
+        "snake_name": "valmiki_nagar",
+        "district": "West Champaran"
+    },
+    {
+        "ac_no": 2,
+        "ac_id": "AC002",
+        "original_name": "Ramnagar",
+        "clean_name": "Ramnagar",
+        "snake_name": "ramnagar",
+        "district": "West Champaran"
+    },
+    {
+        "ac_no": 3,
+        "ac_id": "AC003",
+        "original_name": "Narkatiaganj",
+        "clean_name": "Narkatiaganj",
+        "snake_name": "narkatiaganj",
+        "district": "West Champaran"
+    },
+    {
+        "ac_no": 4,
+        "ac_id": "AC004",
+        "original_name": "Bagaha",
+        "clean_name": "Bagaha",
+        "snake_name": "bagaha",
+        "district": "West Champaran"
+    },
+    {
+        "ac_no": 5,
+        "ac_id": "AC005",
+        "original_name": "Lauriya",
+        "clean_name": "Lauriya",
+        "snake_name": "lauriya",
+        "district": "West Champaran"
+    },
+    {
+        "ac_no": 6,
+        "ac_id": "AC006",
+        "original_name": "Nautan",
+        "clean_name": "Nautan",
+        "snake_name": "nautan",
+        "district": "West Champaran"
+    },
+    {
+        "ac_no": 7,
+        "ac_id": "AC007",
+        "original_name": "Chanpatia",
+        "clean_name": "Chanpatia",
+        "snake_name": "chanpatia",
+        "district": "West Champaran"
+    },
+    {
+        "ac_no": 8,
+        "ac_id": "AC008",
+        "original_name": "Bettiah",
+        "clean_name": "Bettiah",
+        "snake_name": "bettiah",
+        "district": "West Champaran"
+    },
+    {
+        "ac_no": 9,
+        "ac_id": "AC009",
+        "original_name": "Sikta",
+        "clean_name": "Sikta",
+        "snake_name": "sikta",
+        "district": "West Champaran"
+    },
+    {
+        "ac_no": 10,
+        "ac_id": "AC010",
+        "original_name": "Raxaul",
+        "clean_name": "Raxaul",
+        "snake_name": "raxaul",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 11,
+        "ac_id": "AC011",
+        "original_name": "Sugauli",
+        "clean_name": "Sugauli",
+        "snake_name": "sugauli",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 12,
+        "ac_id": "AC012",
+        "original_name": "Narkatiya",
+        "clean_name": "Narkatiya",
+        "snake_name": "narkatiya",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 13,
+        "ac_id": "AC013",
+        "original_name": "Harsidhi",
+        "clean_name": "Harsidhi",
+        "snake_name": "harsidhi",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 14,
+        "ac_id": "AC014",
+        "original_name": "Govindganj",
+        "clean_name": "Govindganj",
+        "snake_name": "govindganj",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 15,
+        "ac_id": "AC015",
+        "original_name": "Kesaria",
+        "clean_name": "Kesaria",
+        "snake_name": "kesaria",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 16,
+        "ac_id": "AC016",
+        "original_name": "Kalyanpur",
+        "clean_name": "Kalyanpur",
+        "snake_name": "kalyanpur",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 17,
+        "ac_id": "AC017",
+        "original_name": "Pipra",
+        "clean_name": "Pipra",
+        "snake_name": "pipra",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 18,
+        "ac_id": "AC018",
+        "original_name": "Madhuban",
+        "clean_name": "Madhuban",
+        "snake_name": "madhuban",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 19,
+        "ac_id": "AC019",
+        "original_name": "Motihari",
+        "clean_name": "Motihari",
+        "snake_name": "motihari",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 20,
+        "ac_id": "AC020",
+        "original_name": "Chiraia",
+        "clean_name": "Chiraia",
+        "snake_name": "chiraia",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 21,
+        "ac_id": "AC021",
+        "original_name": "Dhaka",
+        "clean_name": "Dhaka",
+        "snake_name": "dhaka",
+        "district": "East Champaran"
+    },
+    {
+        "ac_no": 22,
+        "ac_id": "AC022",
+        "original_name": "Sheohar",
+        "clean_name": "Sheohar",
+        "snake_name": "sheohar",
+        "district": "Sheohar"
+    },
+    {
+        "ac_no": 23,
+        "ac_id": "AC023",
+        "original_name": "Riga",
+        "clean_name": "Riga",
+        "snake_name": "riga",
+        "district": "Sitamarhi"
+    },
+    {
+        "ac_no": 24,
+        "ac_id": "AC024",
+        "original_name": "Bathnaha",
+        "clean_name": "Bathnaha",
+        "snake_name": "bathnaha",
+        "district": "Sitamarhi"
+    },
+    {
+        "ac_no": 25,
+        "ac_id": "AC025",
+        "original_name": "Parihar",
+        "clean_name": "Parihar",
+        "snake_name": "parihar",
+        "district": "Sitamarhi"
+    },
+    {
+        "ac_no": 26,
+        "ac_id": "AC026",
+        "original_name": "Sursand",
+        "clean_name": "Sursand",
+        "snake_name": "sursand",
+        "district": "Sitamarhi"
+    },
+    {
+        "ac_no": 27,
+        "ac_id": "AC027",
+        "original_name": "Bajpatti",
+        "clean_name": "Bajpatti",
+        "snake_name": "bajpatti",
+        "district": "Sitamarhi"
+    },
+    {
+        "ac_no": 28,
+        "ac_id": "AC028",
+        "original_name": "Sitamarhi",
+        "clean_name": "Sitamarhi",
+        "snake_name": "sitamarhi",
+        "district": "Sitamarhi"
+    },
+    {
+        "ac_no": 29,
+        "ac_id": "AC029",
+        "original_name": "Runnisaidpur",
+        "clean_name": "Runnisaidpur",
+        "snake_name": "runnisaidpur",
+        "district": "Sitamarhi"
+    },
+    {
+        "ac_no": 30,
+        "ac_id": "AC030",
+        "original_name": "Belsand",
+        "clean_name": "Belsand",
+        "snake_name": "belsand",
+        "district": "Sitamarhi"
+    },
+    {
+        "ac_no": 31,
+        "ac_id": "AC031",
+        "original_name": "Harlakhi",
+        "clean_name": "Harlakhi",
+        "snake_name": "harlakhi",
+        "district": "Madhubani"
+    },
+    {
+        "ac_no": 32,
+        "ac_id": "AC032",
+        "original_name": "Benipatti",
+        "clean_name": "Benipatti",
+        "snake_name": "benipatti",
+        "district": "Madhubani"
+    },
+    {
+        "ac_no": 33,
+        "ac_id": "AC033",
+        "original_name": "Khajauli",
+        "clean_name": "Khajauli",
+        "snake_name": "khajauli",
+        "district": "Madhubani"
+    },
+    {
+        "ac_no": 34,
+        "ac_id": "AC034",
+        "original_name": "Babubarhi",
+        "clean_name": "Babubarhi",
+        "snake_name": "babubarhi",
+        "district": "Madhubani"
+    },
+    {
+        "ac_no": 35,
+        "ac_id": "AC035",
+        "original_name": "Bisfi",
+        "clean_name": "Bisfi",
+        "snake_name": "bisfi",
+        "district": "Madhubani"
+    },
+    {
+        "ac_no": 36,
+        "ac_id": "AC036",
+        "original_name": "Madhubani",
+        "clean_name": "Madhubani",
+        "snake_name": "madhubani",
+        "district": "Madhubani"
+    },
+    {
+        "ac_no": 37,
+        "ac_id": "AC037",
+        "original_name": "Rajnagar",
+        "clean_name": "Rajnagar",
+        "snake_name": "rajnagar",
+        "district": "Madhubani"
+    },
+    {
+        "ac_no": 38,
+        "ac_id": "AC038",
+        "original_name": "Jhanjharpur",
+        "clean_name": "Jhanjharpur",
+        "snake_name": "jhanjharpur",
+        "district": "Madhubani"
+    },
+    {
+        "ac_no": 39,
+        "ac_id": "AC039",
+        "original_name": "Phulparas",
+        "clean_name": "Phulparas",
+        "snake_name": "phulparas",
+        "district": "Madhubani"
+    },
+    {
+        "ac_no": 40,
+        "ac_id": "AC040",
+        "original_name": "Laukaha",
+        "clean_name": "Laukaha",
+        "snake_name": "laukaha",
+        "district": "Madhubani"
+    },
+    {
+        "ac_no": 41,
+        "ac_id": "AC041",
+        "original_name": "Nirmali",
+        "clean_name": "Nirmali",
+        "snake_name": "nirmali",
+        "district": "Supaul"
+    },
+    {
+        "ac_no": 42,
+        "ac_id": "AC042",
+        "original_name": "Pipra",
+        "clean_name": "Pipra",
+        "snake_name": "pipra",
+        "district": "Supaul"
+    },
+    {
+        "ac_no": 43,
+        "ac_id": "AC043",
+        "original_name": "Supaul",
+        "clean_name": "Supaul",
+        "snake_name": "supaul",
+        "district": "Supaul"
+    },
+    {
+        "ac_no": 44,
+        "ac_id": "AC044",
+        "original_name": "Triveniganj",
+        "clean_name": "Triveniganj",
+        "snake_name": "triveniganj",
+        "district": "Supaul"
+    },
+    {
+        "ac_no": 45,
+        "ac_id": "AC045",
+        "original_name": "Chhatapur",
+        "clean_name": "Chhatapur",
+        "snake_name": "chhatapur",
+        "district": "Supaul"
+    },
+    {
+        "ac_no": 46,
+        "ac_id": "AC046",
+        "original_name": "Narpatganj",
+        "clean_name": "Narpatganj",
+        "snake_name": "narpatganj",
+        "district": "Araria"
+    },
+    {
+        "ac_no": 47,
+        "ac_id": "AC047",
+        "original_name": "Raniganj",
+        "clean_name": "Raniganj",
+        "snake_name": "raniganj",
+        "district": "Araria"
+    },
+    {
+        "ac_no": 48,
+        "ac_id": "AC048",
+        "original_name": "Forbesganj",
+        "clean_name": "Forbesganj",
+        "snake_name": "forbesganj",
+        "district": "Araria"
+    },
+    {
+        "ac_no": 49,
+        "ac_id": "AC049",
+        "original_name": "Araria",
+        "clean_name": "Araria",
+        "snake_name": "araria",
+        "district": "Araria"
+    },
+    {
+        "ac_no": 50,
+        "ac_id": "AC050",
+        "original_name": "Jokihat",
+        "clean_name": "Jokihat",
+        "snake_name": "jokihat",
+        "district": "Araria"
+    },
+    {
+        "ac_no": 51,
+        "ac_id": "AC051",
+        "original_name": "Sikti",
+        "clean_name": "Sikti",
+        "snake_name": "sikti",
+        "district": "Araria"
+    },
+    {
+        "ac_no": 52,
+        "ac_id": "AC052",
+        "original_name": "Bahadurganj",
+        "clean_name": "Bahadurganj",
+        "snake_name": "bahadurganj",
+        "district": "Kishanganj"
+    },
+    {
+        "ac_no": 53,
+        "ac_id": "AC053",
+        "original_name": "Thakurganj",
+        "clean_name": "Thakurganj",
+        "snake_name": "thakurganj",
+        "district": "Kishanganj"
+    },
+    {
+        "ac_no": 54,
+        "ac_id": "AC054",
+        "original_name": "Kishanganj",
+        "clean_name": "Kishanganj",
+        "snake_name": "kishanganj",
+        "district": "Kishanganj"
+    },
+    {
+        "ac_no": 55,
+        "ac_id": "AC055",
+        "original_name": "Kochadhaman",
+        "clean_name": "Kochadhaman",
+        "snake_name": "kochadhaman",
+        "district": "Kishanganj"
+    },
+    {
+        "ac_no": 56,
+        "ac_id": "AC056",
+        "original_name": "Amour",
+        "clean_name": "Amour",
+        "snake_name": "amour",
+        "district": "Purnia"
+    },
+    {
+        "ac_no": 57,
+        "ac_id": "AC057",
+        "original_name": "Baisi",
+        "clean_name": "Baisi",
+        "snake_name": "baisi",
+        "district": "Purnia"
+    },
+    {
+        "ac_no": 58,
+        "ac_id": "AC058",
+        "original_name": "Kasba",
+        "clean_name": "Kasba",
+        "snake_name": "kasba",
+        "district": "Purnia"
+    },
+    {
+        "ac_no": 59,
+        "ac_id": "AC059",
+        "original_name": "Banmankhi",
+        "clean_name": "Banmankhi",
+        "snake_name": "banmankhi",
+        "district": "Purnia"
+    },
+    {
+        "ac_no": 60,
+        "ac_id": "AC060",
+        "original_name": "Rupauli",
+        "clean_name": "Rupauli",
+        "snake_name": "rupauli",
+        "district": "Purnia"
+    },
+    {
+        "ac_no": 61,
+        "ac_id": "AC061",
+        "original_name": "Dhamdaha",
+        "clean_name": "Dhamdaha",
+        "snake_name": "dhamdaha",
+        "district": "Purnia"
+    },
+    {
+        "ac_no": 62,
+        "ac_id": "AC062",
+        "original_name": "Purnia",
+        "clean_name": "Purnia",
+        "snake_name": "purnia",
+        "district": "Purnia"
+    },
+    {
+        "ac_no": 63,
+        "ac_id": "AC063",
+        "original_name": "Katihar",
+        "clean_name": "Katihar",
+        "snake_name": "katihar",
+        "district": "Katihar"
+    },
+    {
+        "ac_no": 64,
+        "ac_id": "AC064",
+        "original_name": "Kadwa",
+        "clean_name": "Kadwa",
+        "snake_name": "kadwa",
+        "district": "Katihar"
+    },
+    {
+        "ac_no": 65,
+        "ac_id": "AC065",
+        "original_name": "Balrampur",
+        "clean_name": "Balrampur",
+        "snake_name": "balrampur",
+        "district": "Katihar"
+    },
+    {
+        "ac_no": 66,
+        "ac_id": "AC066",
+        "original_name": "Pranpur",
+        "clean_name": "Pranpur",
+        "snake_name": "pranpur",
+        "district": "Katihar"
+    },
+    {
+        "ac_no": 67,
+        "ac_id": "AC067",
+        "original_name": "Manihari",
+        "clean_name": "Manihari",
+        "snake_name": "manihari",
+        "district": "Katihar"
+    },
+    {
+        "ac_no": 68,
+        "ac_id": "AC068",
+        "original_name": "Barari",
+        "clean_name": "Barari",
+        "snake_name": "barari",
+        "district": "Katihar"
+    },
+    {
+        "ac_no": 69,
+        "ac_id": "AC069",
+        "original_name": "Korha",
+        "clean_name": "Korha",
+        "snake_name": "korha",
+        "district": "Katihar"
+    },
+    {
+        "ac_no": 70,
+        "ac_id": "AC070",
+        "original_name": "Alamnagar",
+        "clean_name": "Alamnagar",
+        "snake_name": "alamnagar",
+        "district": "Madhepura"
+    },
+    {
+        "ac_no": 71,
+        "ac_id": "AC071",
+        "original_name": "Bihariganj",
+        "clean_name": "Bihariganj",
+        "snake_name": "bihariganj",
+        "district": "Madhepura"
+    },
+    {
+        "ac_no": 72,
+        "ac_id": "AC072",
+        "original_name": "Singheshwar",
+        "clean_name": "Singheshwar",
+        "snake_name": "singheshwar",
+        "district": "Madhepura"
+    },
+    {
+        "ac_no": 73,
+        "ac_id": "AC073",
+        "original_name": "Madhepura",
+        "clean_name": "Madhepura",
+        "snake_name": "madhepura",
+        "district": "Madhepura"
+    },
+    {
+        "ac_no": 74,
+        "ac_id": "AC074",
+        "original_name": "Sonbarsha",
+        "clean_name": "Sonbarsha",
+        "snake_name": "sonbarsha",
+        "district": "Saharsa"
+    },
+    {
+        "ac_no": 75,
+        "ac_id": "AC075",
+        "original_name": "Saharsa",
+        "clean_name": "Saharsa",
+        "snake_name": "saharsa",
+        "district": "Saharsa"
+    },
+    {
+        "ac_no": 76,
+        "ac_id": "AC076",
+        "original_name": "Simri Bakhtiarpur",
+        "clean_name": "Simri Bakhtiarpur",
+        "snake_name": "simri_bakhtiarpur",
+        "district": "Saharsa"
+    },
+    {
+        "ac_no": 77,
+        "ac_id": "AC077",
+        "original_name": "Mahishi",
+        "clean_name": "Mahishi",
+        "snake_name": "mahishi",
+        "district": "Saharsa"
+    },
+    {
+        "ac_no": 78,
+        "ac_id": "AC078",
+        "original_name": "Kusheshwar Asthan",
+        "clean_name": "Kusheshwar Asthan",
+        "snake_name": "kusheshwar_asthan",
+        "district": "Darbhanga"
+    },
+    {
+        "ac_no": 79,
+        "ac_id": "AC079",
+        "original_name": "Gaura Bauram",
+        "clean_name": "Gaura Bauram",
+        "snake_name": "gaura_bauram",
+        "district": "Darbhanga"
+    },
+    {
+        "ac_no": 80,
+        "ac_id": "AC080",
+        "original_name": "Benipur",
+        "clean_name": "Benipur",
+        "snake_name": "benipur",
+        "district": "Darbhanga"
+    },
+    {
+        "ac_no": 81,
+        "ac_id": "AC081",
+        "original_name": "Alinagar",
+        "clean_name": "Alinagar",
+        "snake_name": "alinagar",
+        "district": "Darbhanga"
+    },
+    {
+        "ac_no": 82,
+        "ac_id": "AC082",
+        "original_name": "Darbhanga Rural",
+        "clean_name": "Darbhanga Rural",
+        "snake_name": "darbhanga_rural",
+        "district": "Darbhanga"
+    },
+    {
+        "ac_no": 83,
+        "ac_id": "AC083",
+        "original_name": "Darbhanga",
+        "clean_name": "Darbhanga",
+        "snake_name": "darbhanga",
+        "district": "Darbhanga"
+    },
+    {
+        "ac_no": 84,
+        "ac_id": "AC084",
+        "original_name": "Hayaghat",
+        "clean_name": "Hayaghat",
+        "snake_name": "hayaghat",
+        "district": "Darbhanga"
+    },
+    {
+        "ac_no": 85,
+        "ac_id": "AC085",
+        "original_name": "Bahadurpur",
+        "clean_name": "Bahadurpur",
+        "snake_name": "bahadurpur",
+        "district": "Darbhanga"
+    },
+    {
+        "ac_no": 86,
+        "ac_id": "AC086",
+        "original_name": "Keoti",
+        "clean_name": "Keoti",
+        "snake_name": "keoti",
+        "district": "Darbhanga"
+    },
+    {
+        "ac_no": 87,
+        "ac_id": "AC087",
+        "original_name": "Jale",
+        "clean_name": "Jale",
+        "snake_name": "jale",
+        "district": "Darbhanga"
+    },
+    {
+        "ac_no": 88,
+        "ac_id": "AC088",
+        "original_name": "Gaighat",
+        "clean_name": "Gaighat",
+        "snake_name": "gaighat",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 89,
+        "ac_id": "AC089",
+        "original_name": "Aurai",
+        "clean_name": "Aurai",
+        "snake_name": "aurai",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 90,
+        "ac_id": "AC090",
+        "original_name": "Minapur",
+        "clean_name": "Minapur",
+        "snake_name": "minapur",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 91,
+        "ac_id": "AC091",
+        "original_name": "Bochahan",
+        "clean_name": "Bochahan",
+        "snake_name": "bochahan",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 92,
+        "ac_id": "AC092",
+        "original_name": "Sakra",
+        "clean_name": "Sakra",
+        "snake_name": "sakra",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 93,
+        "ac_id": "AC093",
+        "original_name": "Kurhani",
+        "clean_name": "Kurhani",
+        "snake_name": "kurhani",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 94,
+        "ac_id": "AC094",
+        "original_name": "Muzaffarpur",
+        "clean_name": "Muzaffarpur",
+        "snake_name": "muzaffarpur",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 95,
+        "ac_id": "AC095",
+        "original_name": "Kanti",
+        "clean_name": "Kanti",
+        "snake_name": "kanti",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 96,
+        "ac_id": "AC096",
+        "original_name": "Baruraj",
+        "clean_name": "Baruraj",
+        "snake_name": "baruraj",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 97,
+        "ac_id": "AC097",
+        "original_name": "Paroo",
+        "clean_name": "Paroo",
+        "snake_name": "paroo",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 98,
+        "ac_id": "AC098",
+        "original_name": "Sahebganj",
+        "clean_name": "Sahebganj",
+        "snake_name": "sahebganj",
+        "district": "Muzaffarpur"
+    },
+    {
+        "ac_no": 99,
+        "ac_id": "AC099",
+        "original_name": "Baikunthpur",
+        "clean_name": "Baikunthpur",
+        "snake_name": "baikunthpur",
+        "district": "Gopalganj"
+    },
+    {
+        "ac_no": 100,
+        "ac_id": "AC100",
+        "original_name": "Barauli",
+        "clean_name": "Barauli",
+        "snake_name": "barauli",
+        "district": "Gopalganj"
+    },
+    {
+        "ac_no": 101,
+        "ac_id": "AC101",
+        "original_name": "Gopalganj",
+        "clean_name": "Gopalganj",
+        "snake_name": "gopalganj",
+        "district": "Gopalganj"
+    },
+    {
+        "ac_no": 102,
+        "ac_id": "AC102",
+        "original_name": "Kuchaikote",
+        "clean_name": "Kuchaikote",
+        "snake_name": "kuchaikote",
+        "district": "Gopalganj"
+    },
+    {
+        "ac_no": 103,
+        "ac_id": "AC103",
+        "original_name": "Bhore",
+        "clean_name": "Bhore",
+        "snake_name": "bhore",
+        "district": "Gopalganj"
+    },
+    {
+        "ac_no": 104,
+        "ac_id": "AC104",
+        "original_name": "Hathua",
+        "clean_name": "Hathua",
+        "snake_name": "hathua",
+        "district": "Gopalganj"
+    },
+    {
+        "ac_no": 105,
+        "ac_id": "AC105",
+        "original_name": "Siwan",
+        "clean_name": "Siwan",
+        "snake_name": "siwan",
+        "district": "Siwan"
+    },
+    {
+        "ac_no": 106,
+        "ac_id": "AC106",
+        "original_name": "Ziradei",
+        "clean_name": "Ziradei",
+        "snake_name": "ziradei",
+        "district": "Siwan"
+    },
+    {
+        "ac_no": 107,
+        "ac_id": "AC107",
+        "original_name": "Darauli",
+        "clean_name": "Darauli",
+        "snake_name": "darauli",
+        "district": "Siwan"
+    },
+    {
+        "ac_no": 108,
+        "ac_id": "AC108",
+        "original_name": "Raghunathpur",
+        "clean_name": "Raghunathpur",
+        "snake_name": "raghunathpur",
+        "district": "Siwan"
+    },
+    {
+        "ac_no": 109,
+        "ac_id": "AC109",
+        "original_name": "Daraunda",
+        "clean_name": "Daraunda",
+        "snake_name": "daraunda",
+        "district": "Siwan"
+    },
+    {
+        "ac_no": 110,
+        "ac_id": "AC110",
+        "original_name": "Barharia",
+        "clean_name": "Barharia",
+        "snake_name": "barharia",
+        "district": "Siwan"
+    },
+    {
+        "ac_no": 111,
+        "ac_id": "AC111",
+        "original_name": "Goriakothi",
+        "clean_name": "Goriakothi",
+        "snake_name": "goriakothi",
+        "district": "Siwan"
+    },
+    {
+        "ac_no": 112,
+        "ac_id": "AC112",
+        "original_name": "Maharajganj",
+        "clean_name": "Maharajganj",
+        "snake_name": "maharajganj",
+        "district": "Siwan"
+    },
+    {
+        "ac_no": 113,
+        "ac_id": "AC113",
+        "original_name": "Ekma",
+        "clean_name": "Ekma",
+        "snake_name": "ekma",
+        "district": "Saran"
+    },
+    {
+        "ac_no": 114,
+        "ac_id": "AC114",
+        "original_name": "Manjhi",
+        "clean_name": "Manjhi",
+        "snake_name": "manjhi",
+        "district": "Saran"
+    },
+    {
+        "ac_no": 115,
+        "ac_id": "AC115",
+        "original_name": "Baniapur",
+        "clean_name": "Baniapur",
+        "snake_name": "baniapur",
+        "district": "Saran"
+    },
+    {
+        "ac_no": 116,
+        "ac_id": "AC116",
+        "original_name": "Taraiya",
+        "clean_name": "Taraiya",
+        "snake_name": "taraiya",
+        "district": "Saran"
+    },
+    {
+        "ac_no": 117,
+        "ac_id": "AC117",
+        "original_name": "Marhaura",
+        "clean_name": "Marhaura",
+        "snake_name": "marhaura",
+        "district": "Saran"
+    },
+    {
+        "ac_no": 118,
+        "ac_id": "AC118",
+        "original_name": "Chapra",
+        "clean_name": "Chapra",
+        "snake_name": "chapra",
+        "district": "Saran"
+    },
+    {
+        "ac_no": 119,
+        "ac_id": "AC119",
+        "original_name": "Garkha",
+        "clean_name": "Garkha",
+        "snake_name": "garkha",
+        "district": "Saran"
+    },
+    {
+        "ac_no": 120,
+        "ac_id": "AC120",
+        "original_name": "Amnour",
+        "clean_name": "Amnour",
+        "snake_name": "amnour",
+        "district": "Saran"
+    },
+    {
+        "ac_no": 121,
+        "ac_id": "AC121",
+        "original_name": "Parsa",
+        "clean_name": "Parsa",
+        "snake_name": "parsa",
+        "district": "Saran"
+    },
+    {
+        "ac_no": 122,
+        "ac_id": "AC122",
+        "original_name": "Sonpur",
+        "clean_name": "Sonpur",
+        "snake_name": "sonpur",
+        "district": "Saran"
+    },
+    {
+        "ac_no": 123,
+        "ac_id": "AC123",
+        "original_name": "Hajipur",
+        "clean_name": "Hajipur",
+        "snake_name": "hajipur",
+        "district": "Vaishali"
+    },
+    {
+        "ac_no": 124,
+        "ac_id": "AC124",
+        "original_name": "Lalganj",
+        "clean_name": "Lalganj",
+        "snake_name": "lalganj",
+        "district": "Vaishali"
+    },
+    {
+        "ac_no": 125,
+        "ac_id": "AC125",
+        "original_name": "Vaishali",
+        "clean_name": "Vaishali",
+        "snake_name": "vaishali",
+        "district": "Vaishali"
+    },
+    {
+        "ac_no": 126,
+        "ac_id": "AC126",
+        "original_name": "Mahua",
+        "clean_name": "Mahua",
+        "snake_name": "mahua",
+        "district": "Vaishali"
+    },
+    {
+        "ac_no": 127,
+        "ac_id": "AC127",
+        "original_name": "Raja Pakar",
+        "clean_name": "Raja Pakar",
+        "snake_name": "raja_pakar",
+        "district": "Vaishali"
+    },
+    {
+        "ac_no": 128,
+        "ac_id": "AC128",
+        "original_name": "Raghopur",
+        "clean_name": "Raghopur",
+        "snake_name": "raghopur",
+        "district": "Vaishali"
+    },
+    {
+        "ac_no": 129,
+        "ac_id": "AC129",
+        "original_name": "Mahnar",
+        "clean_name": "Mahnar",
+        "snake_name": "mahnar",
+        "district": "Vaishali"
+    },
+    {
+        "ac_no": 130,
+        "ac_id": "AC130",
+        "original_name": "Patepur",
+        "clean_name": "Patepur",
+        "snake_name": "patepur",
+        "district": "Vaishali"
+    },
+    {
+        "ac_no": 131,
+        "ac_id": "AC131",
+        "original_name": "Kalyanpur",
+        "clean_name": "Kalyanpur",
+        "snake_name": "kalyanpur",
+        "district": "Samastipur"
+    },
+    {
+        "ac_no": 132,
+        "ac_id": "AC132",
+        "original_name": "Warisnagar",
+        "clean_name": "Warisnagar",
+        "snake_name": "warisnagar",
+        "district": "Samastipur"
+    },
+    {
+        "ac_no": 133,
+        "ac_id": "AC133",
+        "original_name": "Samastipur",
+        "clean_name": "Samastipur",
+        "snake_name": "samastipur",
+        "district": "Samastipur"
+    },
+    {
+        "ac_no": 134,
+        "ac_id": "AC134",
+        "original_name": "Ujiarpur",
+        "clean_name": "Ujiarpur",
+        "snake_name": "ujiarpur",
+        "district": "Samastipur"
+    },
+    {
+        "ac_no": 135,
+        "ac_id": "AC135",
+        "original_name": "Morwa",
+        "clean_name": "Morwa",
+        "snake_name": "morwa",
+        "district": "Samastipur"
+    },
+    {
+        "ac_no": 136,
+        "ac_id": "AC136",
+        "original_name": "Sarairanjan",
+        "clean_name": "Sarairanjan",
+        "snake_name": "sarairanjan",
+        "district": "Samastipur"
+    },
+    {
+        "ac_no": 137,
+        "ac_id": "AC137",
+        "original_name": "Mohiuddinnagar",
+        "clean_name": "Mohiuddinnagar",
+        "snake_name": "mohiuddinnagar",
+        "district": "Samastipur"
+    },
+    {
+        "ac_no": 138,
+        "ac_id": "AC138",
+        "original_name": "Bibhutipur",
+        "clean_name": "Bibhutipur",
+        "snake_name": "bibhutipur",
+        "district": "Samastipur"
+    },
+    {
+        "ac_no": 139,
+        "ac_id": "AC139",
+        "original_name": "Rosera",
+        "clean_name": "Rosera",
+        "snake_name": "rosera",
+        "district": "Samastipur"
+    },
+    {
+        "ac_no": 140,
+        "ac_id": "AC140",
+        "original_name": "Hasanpur",
+        "clean_name": "Hasanpur",
+        "snake_name": "hasanpur",
+        "district": "Samastipur"
+    },
+    {
+        "ac_no": 141,
+        "ac_id": "AC141",
+        "original_name": "Cheria-Bariarpur",
+        "clean_name": "Cheria-Bariarpur",
+        "snake_name": "cheria_bariarpur",
+        "district": "Begusarai"
+    },
+    {
+        "ac_no": 142,
+        "ac_id": "AC142",
+        "original_name": "Bachhwara",
+        "clean_name": "Bachhwara",
+        "snake_name": "bachhwara",
+        "district": "Begusarai"
+    },
+    {
+        "ac_no": 143,
+        "ac_id": "AC143",
+        "original_name": "Teghra",
+        "clean_name": "Teghra",
+        "snake_name": "teghra",
+        "district": "Begusarai"
+    },
+    {
+        "ac_no": 144,
+        "ac_id": "AC144",
+        "original_name": "Matihani",
+        "clean_name": "Matihani",
+        "snake_name": "matihani",
+        "district": "Begusarai"
+    },
+    {
+        "ac_no": 145,
+        "ac_id": "AC145",
+        "original_name": "Sahebpur Kamal",
+        "clean_name": "Sahebpur Kamal",
+        "snake_name": "sahebpur_kamal",
+        "district": "Begusarai"
+    },
+    {
+        "ac_no": 146,
+        "ac_id": "AC146",
+        "original_name": "Begusarai",
+        "clean_name": "Begusarai",
+        "snake_name": "begusarai",
+        "district": "Begusarai"
+    },
+    {
+        "ac_no": 147,
+        "ac_id": "AC147",
+        "original_name": "Bakhri",
+        "clean_name": "Bakhri",
+        "snake_name": "bakhri",
+        "district": "Begusarai"
+    },
+    {
+        "ac_no": 148,
+        "ac_id": "AC148",
+        "original_name": "Alauli",
+        "clean_name": "Alauli",
+        "snake_name": "alauli",
+        "district": "Khagaria"
+    },
+    {
+        "ac_no": 149,
+        "ac_id": "AC149",
+        "original_name": "Khagaria",
+        "clean_name": "Khagaria",
+        "snake_name": "khagaria",
+        "district": "Khagaria"
+    },
+    {
+        "ac_no": 150,
+        "ac_id": "AC150",
+        "original_name": "Beldaur",
+        "clean_name": "Beldaur",
+        "snake_name": "beldaur",
+        "district": "Khagaria"
+    },
+    {
+        "ac_no": 151,
+        "ac_id": "AC151",
+        "original_name": "Parbatta",
+        "clean_name": "Parbatta",
+        "snake_name": "parbatta",
+        "district": "Khagaria"
+    },
+    {
+        "ac_no": 152,
+        "ac_id": "AC152",
+        "original_name": "Bihpur",
+        "clean_name": "Bihpur",
+        "snake_name": "bihpur",
+        "district": "Bhagalpur"
+    },
+    {
+        "ac_no": 153,
+        "ac_id": "AC153",
+        "original_name": "Gopalpur",
+        "clean_name": "Gopalpur",
+        "snake_name": "gopalpur",
+        "district": "Bhagalpur"
+    },
+    {
+        "ac_no": 154,
+        "ac_id": "AC154",
+        "original_name": "Pirpainti",
+        "clean_name": "Pirpainti",
+        "snake_name": "pirpainti",
+        "district": "Bhagalpur"
+    },
+    {
+        "ac_no": 155,
+        "ac_id": "AC155",
+        "original_name": "Kahalgaon",
+        "clean_name": "Kahalgaon",
+        "snake_name": "kahalgaon",
+        "district": "Bhagalpur"
+    },
+    {
+        "ac_no": 156,
+        "ac_id": "AC156",
+        "original_name": "Bhagalpur",
+        "clean_name": "Bhagalpur",
+        "snake_name": "bhagalpur",
+        "district": "Bhagalpur"
+    },
+    {
+        "ac_no": 157,
+        "ac_id": "AC157",
+        "original_name": "Sultanganj",
+        "clean_name": "Sultanganj",
+        "snake_name": "sultanganj",
+        "district": "Bhagalpur"
+    },
+    {
+        "ac_no": 158,
+        "ac_id": "AC158",
+        "original_name": "Nathnagar",
+        "clean_name": "Nathnagar",
+        "snake_name": "nathnagar",
+        "district": "Bhagalpur"
+    },
+    {
+        "ac_no": 159,
+        "ac_id": "AC159",
+        "original_name": "Amarpur",
+        "clean_name": "Amarpur",
+        "snake_name": "amarpur",
+        "district": "Banka"
+    },
+    {
+        "ac_no": 160,
+        "ac_id": "AC160",
+        "original_name": "Dhoraiya",
+        "clean_name": "Dhoraiya",
+        "snake_name": "dhoraiya",
+        "district": "Banka"
+    },
+    {
+        "ac_no": 161,
+        "ac_id": "AC161",
+        "original_name": "Banka",
+        "clean_name": "Banka",
+        "snake_name": "banka",
+        "district": "Banka"
+    },
+    {
+        "ac_no": 162,
+        "ac_id": "AC162",
+        "original_name": "Katoria",
+        "clean_name": "Katoria",
+        "snake_name": "katoria",
+        "district": "Banka"
+    },
+    {
+        "ac_no": 163,
+        "ac_id": "AC163",
+        "original_name": "Belhar",
+        "clean_name": "Belhar",
+        "snake_name": "belhar",
+        "district": "Banka"
+    },
+    {
+        "ac_no": 164,
+        "ac_id": "AC164",
+        "original_name": "Tarapur",
+        "clean_name": "Tarapur",
+        "snake_name": "tarapur",
+        "district": "Munger"
+    },
+    {
+        "ac_no": 165,
+        "ac_id": "AC165",
+        "original_name": "Munger",
+        "clean_name": "Munger",
+        "snake_name": "munger",
+        "district": "Munger"
+    },
+    {
+        "ac_no": 166,
+        "ac_id": "AC166",
+        "original_name": "Jamalpur",
+        "clean_name": "Jamalpur",
+        "snake_name": "jamalpur",
+        "district": "Munger"
+    },
+    {
+        "ac_no": 167,
+        "ac_id": "AC167",
+        "original_name": "Suryagarha",
+        "clean_name": "Suryagarha",
+        "snake_name": "suryagarha",
+        "district": "Lakhisarai"
+    },
+    {
+        "ac_no": 168,
+        "ac_id": "AC168",
+        "original_name": "Lakhisarai",
+        "clean_name": "Lakhisarai",
+        "snake_name": "lakhisarai",
+        "district": "Lakhisarai"
+    },
+    {
+        "ac_no": 169,
+        "ac_id": "AC169",
+        "original_name": "Sheikhpura",
+        "clean_name": "Sheikhpura",
+        "snake_name": "sheikhpura",
+        "district": "Sheikhpura"
+    },
+    {
+        "ac_no": 170,
+        "ac_id": "AC170",
+        "original_name": "Barbigha",
+        "clean_name": "Barbigha",
+        "snake_name": "barbigha",
+        "district": "Sheikhpura"
+    },
+    {
+        "ac_no": 171,
+        "ac_id": "AC171",
+        "original_name": "Asthawan",
+        "clean_name": "Asthawan",
+        "snake_name": "asthawan",
+        "district": "Nalanda"
+    },
+    {
+        "ac_no": 172,
+        "ac_id": "AC172",
+        "original_name": "Biharsharif",
+        "clean_name": "Biharsharif",
+        "snake_name": "biharsharif",
+        "district": "Nalanda"
+    },
+    {
+        "ac_no": 173,
+        "ac_id": "AC173",
+        "original_name": "Rajgir",
+        "clean_name": "Rajgir",
+        "snake_name": "rajgir",
+        "district": "Nalanda"
+    },
+    {
+        "ac_no": 174,
+        "ac_id": "AC174",
+        "original_name": "Islampur",
+        "clean_name": "Islampur",
+        "snake_name": "islampur",
+        "district": "Nalanda"
+    },
+    {
+        "ac_no": 175,
+        "ac_id": "AC175",
+        "original_name": "Hilsa",
+        "clean_name": "Hilsa",
+        "snake_name": "hilsa",
+        "district": "Nalanda"
+    },
+    {
+        "ac_no": 176,
+        "ac_id": "AC176",
+        "original_name": "Nalanda",
+        "clean_name": "Nalanda",
+        "snake_name": "nalanda",
+        "district": "Nalanda"
+    },
+    {
+        "ac_no": 177,
+        "ac_id": "AC177",
+        "original_name": "Harnaut",
+        "clean_name": "Harnaut",
+        "snake_name": "harnaut",
+        "district": "Nalanda"
+    },
+    {
+        "ac_no": 178,
+        "ac_id": "AC178",
+        "original_name": "Mokama",
+        "clean_name": "Mokama",
+        "snake_name": "mokama",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 179,
+        "ac_id": "AC179",
+        "original_name": "Barh",
+        "clean_name": "Barh",
+        "snake_name": "barh",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 180,
+        "ac_id": "AC180",
+        "original_name": "Bakhtiarpur",
+        "clean_name": "Bakhtiarpur",
+        "snake_name": "bakhtiarpur",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 181,
+        "ac_id": "AC181",
+        "original_name": "Digha",
+        "clean_name": "Digha",
+        "snake_name": "digha",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 182,
+        "ac_id": "AC182",
+        "original_name": "Bankipur",
+        "clean_name": "Bankipur",
+        "snake_name": "bankipur",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 183,
+        "ac_id": "AC183",
+        "original_name": "Kumhrar",
+        "clean_name": "Kumhrar",
+        "snake_name": "kumhrar",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 184,
+        "ac_id": "AC184",
+        "original_name": "Patna Sahib",
+        "clean_name": "Patna Sahib",
+        "snake_name": "patna_sahib",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 185,
+        "ac_id": "AC185",
+        "original_name": "Fatuha",
+        "clean_name": "Fatuha",
+        "snake_name": "fatuha",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 186,
+        "ac_id": "AC186",
+        "original_name": "Danapur",
+        "clean_name": "Danapur",
+        "snake_name": "danapur",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 187,
+        "ac_id": "AC187",
+        "original_name": "Maner",
+        "clean_name": "Maner",
+        "snake_name": "maner",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 188,
+        "ac_id": "AC188",
+        "original_name": "Phulwari",
+        "clean_name": "Phulwari",
+        "snake_name": "phulwari",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 189,
+        "ac_id": "AC189",
+        "original_name": "Masaurhi",
+        "clean_name": "Masaurhi",
+        "snake_name": "masaurhi",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 190,
+        "ac_id": "AC190",
+        "original_name": "Paliganj",
+        "clean_name": "Paliganj",
+        "snake_name": "paliganj",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 191,
+        "ac_id": "AC191",
+        "original_name": "Bikram",
+        "clean_name": "Bikram",
+        "snake_name": "bikram",
+        "district": "Patna"
+    },
+    {
+        "ac_no": 192,
+        "ac_id": "AC192",
+        "original_name": "Sandesh",
+        "clean_name": "Sandesh",
+        "snake_name": "sandesh",
+        "district": "Bhojpur"
+    },
+    {
+        "ac_no": 193,
+        "ac_id": "AC193",
+        "original_name": "Barhara",
+        "clean_name": "Barhara",
+        "snake_name": "barhara",
+        "district": "Bhojpur"
+    },
+    {
+        "ac_no": 194,
+        "ac_id": "AC194",
+        "original_name": "Arrah",
+        "clean_name": "Arrah",
+        "snake_name": "arrah",
+        "district": "Bhojpur"
+    },
+    {
+        "ac_no": 195,
+        "ac_id": "AC195",
+        "original_name": "Agiaon",
+        "clean_name": "Agiaon",
+        "snake_name": "agiaon",
+        "district": "Bhojpur"
+    },
+    {
+        "ac_no": 196,
+        "ac_id": "AC196",
+        "original_name": "Tarari",
+        "clean_name": "Tarari",
+        "snake_name": "tarari",
+        "district": "Bhojpur"
+    },
+    {
+        "ac_no": 197,
+        "ac_id": "AC197",
+        "original_name": "Jagdishpur",
+        "clean_name": "Jagdishpur",
+        "snake_name": "jagdishpur",
+        "district": "Bhojpur"
+    },
+    {
+        "ac_no": 198,
+        "ac_id": "AC198",
+        "original_name": "Shahpur",
+        "clean_name": "Shahpur",
+        "snake_name": "shahpur",
+        "district": "Bhojpur"
+    },
+    {
+        "ac_no": 199,
+        "ac_id": "AC199",
+        "original_name": "Brahampur",
+        "clean_name": "Brahampur",
+        "snake_name": "brahampur",
+        "district": "Buxar"
+    },
+    {
+        "ac_no": 200,
+        "ac_id": "AC200",
+        "original_name": "Buxar",
+        "clean_name": "Buxar",
+        "snake_name": "buxar",
+        "district": "Buxar"
+    },
+    {
+        "ac_no": 201,
+        "ac_id": "AC201",
+        "original_name": "Dumraon",
+        "clean_name": "Dumraon",
+        "snake_name": "dumraon",
+        "district": "Buxar"
+    },
+    {
+        "ac_no": 202,
+        "ac_id": "AC202",
+        "original_name": "Rajpur",
+        "clean_name": "Rajpur",
+        "snake_name": "rajpur",
+        "district": "Buxar"
+    },
+    {
+        "ac_no": 203,
+        "ac_id": "AC203",
+        "original_name": "Ramgarh",
+        "clean_name": "Ramgarh",
+        "snake_name": "ramgarh",
+        "district": "Kaimur"
+    },
+    {
+        "ac_no": 204,
+        "ac_id": "AC204",
+        "original_name": "Mohania",
+        "clean_name": "Mohania",
+        "snake_name": "mohania",
+        "district": "Kaimur"
+    },
+    {
+        "ac_no": 205,
+        "ac_id": "AC205",
+        "original_name": "Bhabua",
+        "clean_name": "Bhabua",
+        "snake_name": "bhabua",
+        "district": "Kaimur"
+    },
+    {
+        "ac_no": 206,
+        "ac_id": "AC206",
+        "original_name": "Chainpur",
+        "clean_name": "Chainpur",
+        "snake_name": "chainpur",
+        "district": "Kaimur"
+    },
+    {
+        "ac_no": 207,
+        "ac_id": "AC207",
+        "original_name": "Chenari",
+        "clean_name": "Chenari",
+        "snake_name": "chenari",
+        "district": "Rohtas"
+    },
+    {
+        "ac_no": 208,
+        "ac_id": "AC208",
+        "original_name": "Sasaram",
+        "clean_name": "Sasaram",
+        "snake_name": "sasaram",
+        "district": "Rohtas"
+    },
+    {
+        "ac_no": 209,
+        "ac_id": "AC209",
+        "original_name": "Kargahar",
+        "clean_name": "Kargahar",
+        "snake_name": "kargahar",
+        "district": "Rohtas"
+    },
+    {
+        "ac_no": 210,
+        "ac_id": "AC210",
+        "original_name": "Dinara",
+        "clean_name": "Dinara",
+        "snake_name": "dinara",
+        "district": "Rohtas"
+    },
+    {
+        "ac_no": 211,
+        "ac_id": "AC211",
+        "original_name": "Nokha",
+        "clean_name": "Nokha",
+        "snake_name": "nokha",
+        "district": "Rohtas"
+    },
+    {
+        "ac_no": 212,
+        "ac_id": "AC212",
+        "original_name": "Dehri",
+        "clean_name": "Dehri",
+        "snake_name": "dehri",
+        "district": "Rohtas"
+    },
+    {
+        "ac_no": 213,
+        "ac_id": "AC213",
+        "original_name": "Karakat",
+        "clean_name": "Karakat",
+        "snake_name": "karakat",
+        "district": "Rohtas"
+    },
+    {
+        "ac_no": 214,
+        "ac_id": "AC214",
+        "original_name": "Arwal",
+        "clean_name": "Arwal",
+        "snake_name": "arwal",
+        "district": "Arwal"
+    },
+    {
+        "ac_no": 215,
+        "ac_id": "AC215",
+        "original_name": "Kurtha",
+        "clean_name": "Kurtha",
+        "snake_name": "kurtha",
+        "district": "Arwal"
+    },
+    {
+        "ac_no": 216,
+        "ac_id": "AC216",
+        "original_name": "Jehanabad",
+        "clean_name": "Jehanabad",
+        "snake_name": "jehanabad",
+        "district": "Jehanabad"
+    },
+    {
+        "ac_no": 217,
+        "ac_id": "AC217",
+        "original_name": "Ghosi",
+        "clean_name": "Ghosi",
+        "snake_name": "ghosi",
+        "district": "Jehanabad"
+    },
+    {
+        "ac_no": 218,
+        "ac_id": "AC218",
+        "original_name": "Makhdumpur",
+        "clean_name": "Makhdumpur",
+        "snake_name": "makhdumpur",
+        "district": "Jehanabad"
+    },
+    {
+        "ac_no": 219,
+        "ac_id": "AC219",
+        "original_name": "Goh",
+        "clean_name": "Goh",
+        "snake_name": "goh",
+        "district": "Aurangabad"
+    },
+    {
+        "ac_no": 220,
+        "ac_id": "AC220",
+        "original_name": "Obra",
+        "clean_name": "Obra",
+        "snake_name": "obra",
+        "district": "Aurangabad"
+    },
+    {
+        "ac_no": 221,
+        "ac_id": "AC221",
+        "original_name": "Nabinagar",
+        "clean_name": "Nabinagar",
+        "snake_name": "nabinagar",
+        "district": "Aurangabad"
+    },
+    {
+        "ac_no": 222,
+        "ac_id": "AC222",
+        "original_name": "Kutumba",
+        "clean_name": "Kutumba",
+        "snake_name": "kutumba",
+        "district": "Aurangabad"
+    },
+    {
+        "ac_no": 223,
+        "ac_id": "AC223",
+        "original_name": "Aurangabad",
+        "clean_name": "Aurangabad",
+        "snake_name": "aurangabad",
+        "district": "Aurangabad"
+    },
+    {
+        "ac_no": 224,
+        "ac_id": "AC224",
+        "original_name": "Rafiganj",
+        "clean_name": "Rafiganj",
+        "snake_name": "rafiganj",
+        "district": "Aurangabad"
+    },
+    {
+        "ac_no": 225,
+        "ac_id": "AC225",
+        "original_name": "Gurua",
+        "clean_name": "Gurua",
+        "snake_name": "gurua",
+        "district": "Gaya"
+    },
+    {
+        "ac_no": 226,
+        "ac_id": "AC226",
+        "original_name": "Sherghati",
+        "clean_name": "Sherghati",
+        "snake_name": "sherghati",
+        "district": "Gaya"
+    },
+    {
+        "ac_no": 227,
+        "ac_id": "AC227",
+        "original_name": "Imamganj",
+        "clean_name": "Imamganj",
+        "snake_name": "imamganj",
+        "district": "Gaya"
+    },
+    {
+        "ac_no": 228,
+        "ac_id": "AC228",
+        "original_name": "Barachatti",
+        "clean_name": "Barachatti",
+        "snake_name": "barachatti",
+        "district": "Gaya"
+    },
+    {
+        "ac_no": 229,
+        "ac_id": "AC229",
+        "original_name": "Bodh Gaya",
+        "clean_name": "Bodh Gaya",
+        "snake_name": "bodh_gaya",
+        "district": "Gaya"
+    },
+    {
+        "ac_no": 230,
+        "ac_id": "AC230",
+        "original_name": "Gaya Town",
+        "clean_name": "Gaya Town",
+        "snake_name": "gaya_town",
+        "district": "Gaya"
+    },
+    {
+        "ac_no": 231,
+        "ac_id": "AC231",
+        "original_name": "Tikari",
+        "clean_name": "Tikari",
+        "snake_name": "tikari",
+        "district": "Gaya"
+    },
+    {
+        "ac_no": 232,
+        "ac_id": "AC232",
+        "original_name": "Belaganj",
+        "clean_name": "Belaganj",
+        "snake_name": "belaganj",
+        "district": "Gaya"
+    },
+    {
+        "ac_no": 233,
+        "ac_id": "AC233",
+        "original_name": "Atri",
+        "clean_name": "Atri",
+        "snake_name": "atri",
+        "district": "Gaya"
+    },
+    {
+        "ac_no": 234,
+        "ac_id": "AC234",
+        "original_name": "Wazirganj",
+        "clean_name": "Wazirganj",
+        "snake_name": "wazirganj",
+        "district": "Gaya"
+    },
+    {
+        "ac_no": 235,
+        "ac_id": "AC235",
+        "original_name": "Rajauli",
+        "clean_name": "Rajauli",
+        "snake_name": "rajauli",
+        "district": "Nawada"
+    },
+    {
+        "ac_no": 236,
+        "ac_id": "AC236",
+        "original_name": "Hisua",
+        "clean_name": "Hisua",
+        "snake_name": "hisua",
+        "district": "Nawada"
+    },
+    {
+        "ac_no": 237,
+        "ac_id": "AC237",
+        "original_name": "Nawada",
+        "clean_name": "Nawada",
+        "snake_name": "nawada",
+        "district": "Nawada"
+    },
+    {
+        "ac_no": 238,
+        "ac_id": "AC238",
+        "original_name": "Gobindpur",
+        "clean_name": "Gobindpur",
+        "snake_name": "gobindpur",
+        "district": "Nawada"
+    },
+    {
+        "ac_no": 239,
+        "ac_id": "AC239",
+        "original_name": "Warsaliganj",
+        "clean_name": "Warsaliganj",
+        "snake_name": "warsaliganj",
+        "district": "Nawada"
+    },
+    {
+        "ac_no": 240,
+        "ac_id": "AC240",
+        "original_name": "Sikandra",
+        "clean_name": "Sikandra",
+        "snake_name": "sikandra",
+        "district": "Jamui"
+    },
+    {
+        "ac_no": 241,
+        "ac_id": "AC241",
+        "original_name": "Jamui",
+        "clean_name": "Jamui",
+        "snake_name": "jamui",
+        "district": "Jamui"
+    },
+    {
+        "ac_no": 242,
+        "ac_id": "AC242",
+        "original_name": "Jhajha",
+        "clean_name": "Jhajha",
+        "snake_name": "jhajha",
+        "district": "Jamui"
+    },
+    {
+        "ac_no": 243,
+        "ac_id": "AC243",
+        "original_name": "Chakai",
+        "clean_name": "Chakai",
+        "snake_name": "chakai",
+        "district": "Jamui"
+    }
+]
