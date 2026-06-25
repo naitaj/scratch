@@ -103,31 +103,58 @@ def parse_affidavit_pdf(pdf_path):
             "error_msg": str(e)
         }
 
-def create_dummy_scanned_pdf(filepath):
+def create_dummy_scanned_pdf(filepath, cand_name="Unknown", party="IND"):
     """
-    Creates an empty or visual-only file representing a scanned affidavit PDF (to test EC2).
+    Creates a valid PDF containing a visual scanned exception placeholder (to test EC2).
+    Keeps text length < 100 to trigger the scanned-only unreadable exception flow.
     """
-    # Writing a minimal PDF structure or dummy byte array
-    with open(filepath, 'wb') as f:
-        # A minimal 0-byte or visual dummy PDF
-        f.write(b"%PDF-1.4 ... dummy scanned image PDF content ...")
+    content = f"[SCANNED IMAGE ONLY]\nCandidate: {cand_name}\nParty: {party}"
+    create_dummy_text_pdf(filepath, content)
 
 def create_dummy_text_pdf(filepath, content):
     """
-    Creates a text-based PDF containing the affidavit details.
+    Creates a text-based PDF containing the affidavit details in a valid format.
     """
-    # Simple mock: we write the plain text as dummy PDF representation or copy it
-    # Note: since pdfplumber requires a valid PDF header, we'll write a minimal valid PDF header
-    # or just use our robust mock fallback when pdfplumber throws PDFSyntaxError
+    lines = content.split('\n')
+    escaped_lines = []
+    for line in lines:
+        escaped = line.replace('\\', '\\\\').replace('(', '\\(').replace(')', '\\)')
+        escaped_lines.append(escaped)
+        
+    stream_content = "BT\n/F1 12 Tf\n14 TL\n70 750 Td\n"
+    for line in escaped_lines:
+        stream_content += f"({line}) Tj T*\n"
+    stream_content += "ET\n"
+    
+    pdf_data = bytearray()
+    pdf_data.extend(b"%PDF-1.4\n")
+    
+    offsets = {}
+    def add_object(obj_num, data_str):
+        offsets[obj_num] = len(pdf_data)
+        pdf_data.extend(f"{obj_num} 0 obj\n{data_str}\nendobj\n".encode('utf-8'))
+        
+    add_object(1, "<< /Type /Catalog /Pages 2 0 R >>")
+    add_object(2, "<< /Type /Pages /Kids [3 0 R] /Count 1 >>")
+    add_object(3, "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources 5 0 R >>")
+    add_object(4, f"<< /Length {len(stream_content)} >>\nstream\n" + stream_content + "endstream")
+    add_object(5, "<< /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >>")
+    
+    xref_start = len(pdf_data)
+    pdf_data.extend(b"xref\n")
+    pdf_data.extend(f"0 {len(offsets) + 1}\n".encode('utf-8'))
+    pdf_data.extend(b"0000000000 65535 f\n")
+    for i in range(1, len(offsets) + 1):
+        pdf_data.extend(f"{offsets[i]:010d} 00000 n\n".encode('utf-8'))
+        
+    pdf_data.extend(b"trailer\n")
+    pdf_data.extend(f"<< /Size {len(offsets) + 1} /Root 1 0 R >>\n".encode('utf-8'))
+    pdf_data.extend(b"startxref\n")
+    pdf_data.extend(f"{xref_start}\n".encode('utf-8'))
+    pdf_data.extend(b"%%EOF\n")
+    
     with open(filepath, 'wb') as f:
-        f.write(b"%PDF-1.4\n")
-        f.write(f"1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n".encode('utf-8'))
-        f.write(f"2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n".encode('utf-8'))
-        f.write(f"3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R >>\nendobj\n".encode('utf-8'))
-        # Text streams in PDF are compressed or encoded, so writing raw text direct in stream
-        # will cause pdfplumber to fail to parse easily, which triggers the EC2 scanned/unreadable flow.
-        f.write(f"4 0 obj\n<< /Length {len(content)} >>\nstream\n{content}\nendstream\nendobj\n".encode('utf-8'))
-        f.write(b"xref\n0 5\n0000000000 65535 f\n0000000009 00000 n\n0000000058 00000 n\n0000000115 00000 n\n0000000201 00000 n\ntrailer\n<< /Size 5 /Root 1 0 R >>\nstartxref\n310\n%%EOF\n")
+        f.write(pdf_data)
 
 def harvest_affidavits_for_constituency(constituency, candidates, live=False):
     """
@@ -166,18 +193,18 @@ def harvest_affidavits_for_constituency(constituency, candidates, live=False):
                 # Download pdf...
                 # For this run, we mock the PDF creation
                 if is_scanned_unreadable:
-                    create_dummy_scanned_pdf(pdf_path)
+                    create_dummy_scanned_pdf(pdf_path, cand_name, party)
                 else:
                     content = f"Name: {cand_name}\nParty: {party}\nEducational Qualification: Graduate\nAssets: 25000000\nLiabilities: 150000"
                     create_dummy_text_pdf(pdf_path, content)
                     
             except Exception as e:
                 log_warn(f"Failed to fetch live PDF for {cand_name}: {e}")
-                create_dummy_scanned_pdf(pdf_path)
+                create_dummy_scanned_pdf(pdf_path, cand_name, party)
         else:
             # Simulated PDF creation
             if is_scanned_unreadable:
-                create_dummy_scanned_pdf(pdf_path)
+                create_dummy_scanned_pdf(pdf_path, cand_name, party)
             else:
                 content = f"Name: {cand_name}\nParty: {party}\nEducational Qualification: Graduate\nAssets: 25000000\nLiabilities: 150000"
                 create_dummy_text_pdf(pdf_path, content)
