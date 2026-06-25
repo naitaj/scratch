@@ -3,8 +3,8 @@ import json
 
 # Root directories
 WORKSPACE_DIR = r"c:\scratch"
-DATA_DIR = os.path.join(WORKSPACE_DIR, "data")
-RAW_DIR = os.path.join(DATA_DIR, "raw")
+RAW_DIR = r"C:\BoothIQ\data\raw"
+
 
 # Specific data paths (DR1: Standardized Storage Mapping)
 DIRS = {

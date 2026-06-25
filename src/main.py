@@ -184,57 +184,85 @@ async def run_pipeline(limit=None, live=False):
             ac_no = constituency["ac_no"]
             ac_id = constituency["ac_id"]
             name = constituency["clean_name"]
+            snake = constituency["snake_name"]
             
             log_info(f"[{idx+1}/{len(target_constituencies)}] Starting processing for {ac_id} - {name}")
             
             # Module 1: ECI 2025 results
-            ok = await harvest_constituency_eci(page, constituency, 2025, live=live)
-            if not ok:
-                log_error(f"ECI 2025 harvesting failed for {ac_id}. Skipping constituency.")
-                continue
+            file_eci2025 = os.path.join(DIRS["eci_2025"], f"{ac_id}_{snake}_eci2025.jsonl")
+            if os.path.exists(file_eci2025):
+                log_info(f"ECI 2025 data already exists for {ac_id} ({os.path.basename(file_eci2025)}). Skipping.")
+            else:
+                ok = await harvest_constituency_eci(page, constituency, 2025, live=live)
+                if not ok:
+                    log_error(f"ECI 2025 harvesting failed for {ac_id}. Skipping constituency.")
+                    continue
                 
             # Module 1 (historical): ECI 2020 results
-            ok = await harvest_constituency_eci(page, constituency, 2020, live=live)
-            if not ok:
-                log_error(f"ECI 2020 harvesting failed for {ac_id}. Skipping.")
-                continue
+            file_eci2020 = os.path.join(DIRS["eci_2020"], f"{ac_id}_{snake}_eci2020.jsonl")
+            if os.path.exists(file_eci2020):
+                log_info(f"ECI 2020 data already exists for {ac_id} ({os.path.basename(file_eci2020)}). Skipping.")
+            else:
+                ok = await harvest_constituency_eci(page, constituency, 2020, live=live)
+                if not ok:
+                    log_error(f"ECI 2020 harvesting failed for {ac_id}. Skipping.")
+                    continue
                 
             # Retrieve candidates for affidavit scraping (we read them from the ECI 2025 outputs we just saved)
             # Load candidate list from saved JSON Lines file
-            saved_eci_file = os.path.join(DIRS["eci_2025"], f"{ac_id}_{constituency['snake_name']}_eci2025.jsonl")
-            with open(saved_eci_file, 'r', encoding='utf-8') as f:
-                eci_data = json.loads(f.readline())
-            candidates = eci_data["candidates"]
+            try:
+                with open(file_eci2025, 'r', encoding='utf-8') as f:
+                    eci_data = json.loads(f.readline())
+                candidates = eci_data["candidates"]
+            except Exception as e:
+                log_error(f"Failed to read candidates from {file_eci2025}: {e}. Skipping affidavits.")
+                candidates = []
             
             # Module 2: Candidate Affidavits Scraper
-            ok = harvest_affidavits_for_constituency(constituency, candidates, live=live)
-            if not ok:
-                log_error(f"Affidavits harvesting failed for {ac_id}. Skipping.")
-                continue
+            file_aff = os.path.join(DIRS["candidate_affidavits"], f"{ac_id}_{snake}_affidavits.jsonl")
+            if os.path.exists(file_aff):
+                log_info(f"Affidavits data already exists for {ac_id} ({os.path.basename(file_aff)}). Skipping.")
+            elif candidates:
+                ok = harvest_affidavits_for_constituency(constituency, candidates, live=live)
+                if not ok:
+                    log_error(f"Affidavits harvesting failed for {ac_id}. Skipping.")
                 
             # Module 3: Census Demographic Ingester
-            ok = ingest_constituency_census(constituency, live=live)
-            if not ok:
-                log_error(f"Census ingestion failed for {ac_id}. Skipping.")
-                continue
+            file_census = os.path.join(DIRS["census"], f"{ac_id}_{snake}_census.jsonl")
+            if os.path.exists(file_census):
+                log_info(f"Census data already exists for {ac_id} ({os.path.basename(file_census)}). Skipping.")
+            else:
+                ok = ingest_constituency_census(constituency, live=live)
+                if not ok:
+                    log_error(f"Census ingestion failed for {ac_id}. Skipping.")
                 
             # Module 4: Welfare Scheme Allocation Tracker
-            ok = track_constituency_schemes(constituency, live=live)
-            if not ok:
-                log_error(f"Scheme tracking failed for {ac_id}. Skipping.")
-                continue
+            file_schemes = os.path.join(DIRS["schemes"], f"{ac_id}_{snake}_schemes.jsonl")
+            if os.path.exists(file_schemes):
+                log_info(f"Welfare schemes data already exists for {ac_id} ({os.path.basename(file_schemes)}). Skipping.")
+            else:
+                ok = track_constituency_schemes(constituency, live=live)
+                if not ok:
+                    log_error(f"Scheme tracking failed for {ac_id}. Skipping.")
                 
             # Module 5: News Aggregator
-            ok = aggregate_constituency_news(constituency, live=live)
-            if not ok:
-                log_error(f"News aggregation failed for {ac_id}. Skipping.")
-                continue
+            file_news = os.path.join(DIRS["news"], f"{ac_id}_{snake}_news.jsonl")
+            if os.path.exists(file_news):
+                log_info(f"News data already exists for {ac_id} ({os.path.basename(file_news)}). Skipping.")
+            else:
+                ok = aggregate_constituency_news(constituency, live=live)
+                if not ok:
+                    log_error(f"News aggregation failed for {ac_id}. Skipping.")
                 
             # Module 6: Spatial Downloader
-            ok = download_constituency_spatial(constituency, live=live)
-            if not ok:
-                log_error(f"Spatial boundary download failed for {ac_id}. Skipping.")
-                continue
+            file_spatial = os.path.join(DIRS["spatial"], f"{ac_id}_{snake}_spatial.geojson")
+            if os.path.exists(file_spatial):
+                log_info(f"Spatial boundary data already exists for {ac_id} ({os.path.basename(file_spatial)}). Skipping.")
+            else:
+                ok = download_constituency_spatial(constituency, live=live)
+                if not ok:
+                    log_error(f"Spatial boundary download failed for {ac_id}. Skipping.")
+
                 
             # Record completed AC
             completed_nos.append(ac_no)
