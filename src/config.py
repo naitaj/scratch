@@ -25,6 +25,7 @@ DIRS = {
     "latest": os.path.join(RAW_DIR, "latest"),
     "latest1": os.path.join(RAW_DIR, "latest1"),
     "latest2": os.path.join(RAW_DIR, "latest2"),
+    "latest3": os.path.join(RAW_DIR, "latest3"),
 }
 
 # Ensure directories exist (DR1)
